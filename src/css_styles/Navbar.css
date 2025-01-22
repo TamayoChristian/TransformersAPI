@@ -1,0 +1,30 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo{
+  font-size: 32px;
+  color: blueviolet;
+  font-weight: 700;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: rgb(255, 255, 255, 0.3);
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.4s;
+}
+
+.navbar a:hover{
+  text-shadow: 0 0 25px rgba(235, 235, 241, 0.75), 0 0 5px rgba(111, 111, 221, 1);
+  color: rgb(255, 255, 255, 1);
+}

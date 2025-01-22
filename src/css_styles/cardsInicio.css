@@ -1,0 +1,7 @@
+.card{
+    margin-top: 20%;
+    color: rgb(194, 177, 177);
+    width: 40%;
+    background:red;
+    transform: skewX(-10deg);
+}
