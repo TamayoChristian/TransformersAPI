@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zen+Dots&display=swap');
-
-
 .inicio-Title{
     font-family: 'Zen Dots';
     background: linear-gradient(15deg, rgb(20, 40, 100) 20%, rgb(205, 255, 255) 80%);
@@ -28,6 +25,7 @@
     width: 45%;
     font-size: 160%;
     animation: typing 6s infinite alternate;
+    font-family: 'Zen Dots';
 }
 
 @keyframes typing {
@@ -47,7 +45,17 @@
     display: flex;
     align-items: center;
 }
+.Enlace{
+    font-Size: 150%;
+    font-family: 'Zen Dots';
+    color: rgb(3, 160, 223);
+    margin-Top: 15%;
+    margin-Left: 47%;
+    text-Shadow: 0px 0 20px rgba(3, 161, 223, 0.44);
+    font-Style: italic
+}
 .CajaUrl{
+    font-family: 'Zen Dots';
     padding: 0.7%;
     color: rgb(255, 255, 255);
     white-space: nowrap;
@@ -60,6 +68,7 @@
                       linear-gradient(rgb(14, 113, 179), rgb(77, 14, 179)); /*Bordes*/
 }
 .inputUrl{
+    font-family: 'Zen Dots';
     padding: 0.7%;
     font-size: 100%;
     color: white;
@@ -86,6 +95,8 @@
                       linear-gradient(rgb(14, 113, 179), rgb(77, 14, 179));
 }
 .buscarButton{
+    font-family: 'Zen Dots';
+    font-style: italic;
     padding: 0.7%;
     font-size: 130%;
     color: rgb(255, 255, 255);
@@ -99,6 +110,52 @@
     background: linear-gradient(rgb(14, 113, 179), rgb(77, 14, 179));
 }
 
-.campoCodigo{
-    background-color: aqua;
+.campoCodigo {
+    position: relative;
+    background: rgb(20, 20, 20);
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 21.5%;
+    padding: 20px; /* Añade un poco de relleno para que el contenido no toque los bordes */
+    overflow: hidden; /* Asegura que los bordes no sobresalgan del contenedor */
+    z-index: 2;
+}
+
+.campoCodigo::before {
+    content: '';
+    position: absolute;
+    top: -800%;
+    left: -150%;
+    width: 400%;
+    height: 1700%;
+    background: conic-gradient(rgb(15, 7, 87), transparent 180deg, rgb(152, 2, 172) 180deg, transparent);
+    transform:scale(1.5);
+    z-index: -2;
+    animation: rotate-border 10s linear infinite;
+}
+
+.campoCodigo::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgb(20, 20, 20);
+    z-index: -2;
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.campoCodigoTexto{
+    font-family: "Iceland", serif;
+    color: white;
+    font-size:large;
 }

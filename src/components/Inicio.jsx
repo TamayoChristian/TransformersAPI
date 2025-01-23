@@ -50,7 +50,7 @@ const Inicio = () => {
 
     const render = (registro) => {
         if(registro.altura && registro.peso){
-            return <div>
+            return <div className='campoCodigoTexto'>
                 <p><strong>"idTransformer":</strong> {registro.idTransformer}</p>
                 <p><strong>"nombreTrans":</strong> {registro.nombreTrans}</p>
                 <p><strong>"altura":</strong> {registro.altura} metros</p>
@@ -61,46 +61,46 @@ const Inicio = () => {
                 <p><strong>"genero":</strong> {registro.genero}</p>
                 <p><strong>"urlImagen":</strong> {registro.urlImagen}</p>
                 <p><strong>"faccion": </strong> {"{"} 
-                                <p><strong>"idFaccion":</strong> {registro.faccion.idFaccion}</p>
-                                <p><strong>"nombreFaccion":</strong> {registro.faccion.nombreFaccion}</p>                          
-                                <p><strong>"lider":</strong> {registro.faccion.lider}</p>
+                                <p style={{marginLeft:'5%'}}><strong>"idFaccion":</strong> {registro.faccion.idFaccion}</p>
+                                <p style={{marginLeft:'5%'}}><strong>"nombreFaccion":</strong> {registro.faccion.nombreFaccion}</p>                          
+                                <p style={{marginLeft:'5%'}}><strong>"lider":</strong> {registro.faccion.lider}</p>
                                  {"}"}</p>
                 {/* Validar los casos de transformer sin subfaccion*/}
                 {registro.subFaccion ? (
                     <p><strong>"subFaccion":</strong>{"{"}
-                    <p><strong>"idSubFaccion":</strong>{registro.subFaccion.idSubFaccion}</p>
-                    <p><strong>"nombreSubFaccion":</strong>{registro.subFaccion.nombreSubFaccion}</p>
-                    <p><strong>"lider":</strong>{registro.subFaccion.lider}</p>
-                    <p><strong>"faccionPrincipal":</strong>{"{"}
-                                    <p><strong>"idFaccion":</strong>{registro.subFaccion.faccionPrincipal.idFaccion}</p>
-                                    <p><strong>"nombreFaccion":</strong>{registro.subFaccion.faccionPrincipal.nombreFaccion}</p>
-                                    <p><strong>"lider":</strong>{registro.subFaccion.faccionPrincipal.lider}</p>
-                                    {"}"} </p>
-                                    {"}"}</p> 
+                        <p style={{marginLeft:'5%'}}><strong>"idSubFaccion":</strong>{registro.subFaccion.idSubFaccion}</p>
+                        <p style={{marginLeft:'5%'}}><strong>"nombreSubFaccion":</strong>{registro.subFaccion.nombreSubFaccion}</p>
+                        <p style={{marginLeft:'5%'}}><strong>"lider":</strong>{registro.subFaccion.lider}</p>
+                        <p style={{marginLeft:'5%'}}><strong>"faccionPrincipal":</strong>{"{"}
+                                        <p style={{marginLeft:'5%'}}><strong>"idFaccion":</strong>{registro.subFaccion.faccionPrincipal.idFaccion}</p>
+                                        <p style={{marginLeft:'5%'}}><strong>"nombreFaccion":</strong>{registro.subFaccion.faccionPrincipal.nombreFaccion}</p>
+                                        <p style={{marginLeft:'5%'}}><strong>"lider":</strong>{registro.subFaccion.faccionPrincipal.lider}</p>
+                                        {"}"} </p>
+                                        {"}"}</p> 
                 ):null}                
                 </div>
         }
         else if(registro.idFaccion && registro.nombreFaccion){
-            return <div>
+            return <div className='campoCodigoTexto'>
                  <p><strong>"idFaccion":</strong> {registro.idFaccion}</p>
                                 <p><strong>"nombreFaccion":</strong> {registro.nombreFaccion}</p>                          
                                 <p><strong>"lider":</strong> {registro.lider}</p>
             </div>
         } 
         else if(registro.nombreSubFaccion && registro.idSubFaccion){
-            return <div>
+            return <div className='campoCodigoTexto'>
                 <p><strong>"idSubFaccion":</strong>{registro.idSubFaccion}</p>
                     <p><strong>"nombreSubFaccion":</strong>{registro.nombreSubFaccion}</p>
                     <p><strong>"lider":</strong>{registro.lider}</p>
                     <p><strong>"faccionPrincipal":</strong>{"{"}
-                                    <p><strong>"idFaccion":</strong>{registro.faccionPrincipal.idFaccion}</p>
-                                    <p><strong>"nombreFaccion":</strong>{registro.faccionPrincipal.nombreFaccion}</p>
-                                    <p><strong>"lider":</strong>{registro.faccionPrincipal.lider}</p>
+                                    <p style={{marginLeft:'5%'}}><strong>"idFaccion":</strong>{registro.faccionPrincipal.idFaccion}</p>
+                                    <p style={{marginLeft:'5%'}}><strong>"nombreFaccion":</strong>{registro.faccionPrincipal.nombreFaccion}</p>
+                                    <p style={{marginLeft:'5%'}}><strong>"lider":</strong>{registro.faccionPrincipal.lider}</p>
                                     {"}"} </p>
             </div>
         }
         else{
-            return <p>Ha ocurrido un error</p>
+            return <p>Ha ocurrido un error, probablemente el registro no existe</p>
         }
     }
 
@@ -118,14 +118,7 @@ const Inicio = () => {
             {/* Sección de copiado de la Url*/}
             <div>
                 {/*Titulo Enlace */}
-                <p style={{
-                    fontSize: '150%',
-                    color: 'rgb(3, 160, 223)',
-                    marginTop: '15%',
-                    marginLeft: '47%',
-                    textShadow: '0px 0 20px rgba(3, 161, 223, 0.44)',
-                    fontStyle: 'italic'
-                }}>Enlace</p>
+                <p className='Enlace'>Enlace</p>
                 {/* Sección para copiar*/}
                 <div className='SeccionCopia'>
                     <div className='CajaUrl'>
